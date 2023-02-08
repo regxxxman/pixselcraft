@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    /* background: url("https://i.pinimg.com/564x/0f/65/64/0f656423395e1f1ed4cea448d6eec5dc.jpg") no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    min-width: 100vw; */
+    /* background: gray; */
+}
+
+#app {
+    background: #111111;
+}
+
+body {
+    overflow: hidden;
+}
+
+#app {
+    height: 100vh;
+    overflow: auto;
+}
