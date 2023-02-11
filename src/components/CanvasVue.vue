@@ -1,12 +1,16 @@
 <script setup>
 import { onMounted } from 'vue';
 
-onMounted(() => {
 
-    var canvas = document.getElementById('nokey'),
+
+let Draw = () => {
+
+    let canvas = document.getElementById('nokey'),
         can_w = parseInt(canvas.getAttribute('width')),
         can_h = parseInt(canvas.getAttribute('height')),
         ctx = canvas.getContext('2d');
+
+
 
     // console.log(typeof can_w);
     var BALL_NUM = 30
@@ -242,7 +246,7 @@ onMounted(() => {
         can_h = parseInt(canvas.getAttribute('height'));
     }
     window.addEventListener('resize', function (e) {
-        console.log('Window Resize...');
+        // console.log('Window Resize...');
         initCanvas();
     });
 
@@ -255,12 +259,12 @@ onMounted(() => {
 
     // Mouse effect
     canvas.addEventListener('mouseenter', function () {
-        console.log('mouseenter');
+        // console.log('mouseenter');
         mouse_in = true;
         balls.push(mouse_ball);
     });
     canvas.addEventListener('mouseleave', function () {
-        console.log('mouseleave');
+        // console.log('mouseleave');
         mouse_in = false;
         var new_balls = [];
         Array.prototype.forEach.call(balls, function (b) {
@@ -276,6 +280,10 @@ onMounted(() => {
         mouse_ball.y = e.pageY;
         // console.log(mouse_ball);
     });
+}
+onMounted(() => {
+
+    Draw();
 })
 </script>
 
